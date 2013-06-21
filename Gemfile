@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0.rc1'
 gem 'jquery-rails'
 
+
 group :production do
   gem 'pg'
 end
@@ -19,6 +20,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.0.1'
 
 group :doc do
+ 
   gem 'sdoc', require: false
 end
 
