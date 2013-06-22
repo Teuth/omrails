@@ -12,7 +12,8 @@
     </a>
      
     <!-- Be sure to leave the brand out there if you want it shown -->
-    <a class="brand" href="#">On month rails</a>
+    
+    <%= link_to "On Month Rails", root_path, class: "brand" %>
      
     <!-- Everything you want hidden at 940px or less, place within here -->
     <div class="nav-collapse collapse">
@@ -22,7 +23,17 @@
     </ul>
 
     <ul class="nav pull-right">
-    	<li><%= link_to "log-in", root_path %></li>
+
+        <% if user_signed_in? %>
+
+        <li><%= link_to "log-out", destroy_user_session_path, method: :delete  %></li>
+        <li><%= link_to "Edit Profil",  edit_user_registration_path  %></li>
+
+        <% else %>
+
+    	<li><%= link_to "log-in", new_user_session_path %></li>
+
+        <% end %>
         
     </ul>
 
