@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0.rc1'
 gem 'jquery-rails'
 gem 'devise','3.0.0.rc'
-
+gem 'simple_form','3.0.0.rc'
 
 
 group :production do
